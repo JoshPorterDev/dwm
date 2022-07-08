@@ -2,26 +2,30 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 40;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=14", "FontAwesome:size=12", "monospace:size=12" };
-static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=14";
-static const char col_gray1[]       = "#222222";
+static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 8;        /* vertical padding for statusbar */
+static const char *fonts[]          = { "FuraCode Nerd Font:style=Bold:size=12" };
+static const char dmenufont[]       = "FuraCode Nerd Font:style=Regular:size=12";
+static const char col_gray1[]       = "#24283b";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
+static const char col_border[]      = "#7aa2f7";
 /* This cyan color determines top bar and current tag color */
-static const char col_cyan[]        = "#3971ed";
+static const char col_cyan[]        = "#24283b";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_border },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_border  },
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "" };
+//static const char *tags[] = { "", "", "", "", "", "" };
+static const char *tags[] = {"", "", "", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -60,7 +64,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "/usr/bin/kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
