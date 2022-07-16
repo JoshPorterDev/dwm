@@ -10,13 +10,13 @@ static const int horizpadbar        = 2;        /* horizontal padding for status
 static const int vertpadbar         = 8;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "FuraCode Nerd Font:style=Bold:size=12" };
 static const char dmenufont[]       = "FuraCode Nerd Font:style=Regular:size=12";
-static const char col_gray1[]       = "#24283b";
+static const char col_gray1[]       = "#1a1b26";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_border[]      = "#7aa2f7";
 /* This cyan color determines top bar and current tag color */
-static const char col_cyan[]        = "#24283b";
+static const char col_cyan[]        = "#1a1b26";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_border },
